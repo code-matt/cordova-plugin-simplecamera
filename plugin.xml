@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="aroundme-simplecamera" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>aroundme-simplecamera</name>
+    <js-module name="aroundme-simplecamera" src="www/aroundme-simplecamera.js">
+        <clobbers target="cordova.plugins.aroundme-simplecamera" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="SimpleCamera">
+                <param name="ios-package" value="SimpleCamera" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/SimpleCamera.h" targer-dir="." />
+        <source-file src="src/SimpleCamera.m" targer-dir="." />
+    </platform>
+</plugin>
